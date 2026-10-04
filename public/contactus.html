@@ -1,0 +1,3109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Contact Us — Amja Travels | Colombo, Sri Lanka</title>
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+<meta
+  name="description"
+  content="Contact Amja Travels in Colombo for Sri Lanka tours, flights, hotels, chauffeur services, pilgrimage travel and personalised journeys."
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=Abril+Fatface&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --cream:#FBFCFE;
+  --sand:#EDF1F7;
+  --sand-2:#DCE6F2;
+
+  --ink:#1E2F52;
+  --ink-70:rgba(30,47,82,.72);
+  --ink-45:rgba(30,47,82,.45);
+  --ink-15:rgba(30,47,82,.14);
+
+  --ocean:#4C6A9C;
+  --ocean-deep:#22375F;
+  --ocean-lite:#A9BCDC;
+  --powder:#B9D0EA;
+
+  --serif:"Abril Fatface","Cormorant",Georgia,serif;
+  --body:"Raleway",system-ui,sans-serif;
+
+  --e:cubic-bezier(.19,1,.22,1);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-font-smoothing:antialiased;
+}
+
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--body);
+  font-weight:300;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea{
+  font-family:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.wrap{
+  width:min(1360px,90vw);
+  margin-inline:auto;
+}
+
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+#prog{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0;
+  height:3px;
+  background:var(--ocean);
+  z-index:9999;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:900;
+  padding:24px 0;
+
+  transition:
+    transform .55s var(--e),
+    background .45s,
+    padding .45s,
+    box-shadow .45s;
+}
+
+header.s{
+  background:rgba(251,252,254,.94);
+  backdrop-filter:blur(14px);
+  padding:14px 0;
+  box-shadow:0 1px 0 var(--ink-15);
+}
+
+header .bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  width:min(1360px,90vw);
+  margin-inline:auto;
+}
+
+
+/* LOGO */
+
+.brand{
+  display:block;
+  position:relative;
+  height:48px;
+  width:180px;
+  z-index:5;
+}
+
+.brand img{
+  height:48px;
+  width:auto;
+  object-fit:contain;
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  transition:opacity .45s;
+}
+
+.brand .ld{
+  opacity:0;
+}
+
+header.s .brand .lw{
+  opacity:0;
+}
+
+header.s .brand .ld{
+  opacity:1;
+}
+
+
+/* NAV */
+
+header nav{
+  display:flex;
+  gap:14px;
+
+  font-size:.76rem;
+  font-weight:400;
+  letter-spacing:.06em;
+
+  color:var(--cream);
+
+  transition:color .45s;
+}
+
+header.s nav{
+  color:var(--ink);
+}
+
+header nav a{
+  position:relative;
+
+  padding:9px 14px;
+  border-radius:100px;
+
+  opacity:.85;
+
+  transition:
+    opacity .3s,
+    background .3s,
+    color .3s;
+}
+
+header nav a:hover{
+  opacity:1;
+}
+
+header nav a::after{
+  content:"";
+
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:5px;
+
+  height:1.5px;
+
+  background:var(--powder);
+
+  transform:scaleX(0);
+  transform-origin:center;
+
+  transition:transform .45s var(--e);
+}
+
+header nav a:hover::after,
+header nav a.on::after{
+  transform:scaleX(1);
+}
+
+
+/* ACTIVE CONTACT */
+
+header nav a.on{
+  opacity:1;
+
+  background:rgba(251,252,254,.16);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(251,252,254,.25),
+    0 5px 20px rgba(0,0,0,.08);
+}
+
+header.s nav a.on{
+  background:rgba(76,106,156,.10);
+  color:var(--ocean-deep);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(76,106,156,.16);
+}
+
+header.s nav a.on::after{
+  background:var(--ocean);
+}
+
+
+/* PLAN BUTTON */
+
+.hb{
+  border:1.5px solid currentColor;
+
+  padding:11px 24px;
+  border-radius:100px;
+
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.04em;
+
+  color:var(--cream);
+
+  transition:all .4s;
+}
+
+header.s .hb{
+  color:var(--ink);
+}
+
+.hb:hover{
+  background:var(--ocean);
+  border-color:var(--ocean);
+  color:var(--cream);
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.mt{
+  display:none;
+
+  background:none;
+  border:0;
+
+  color:var(--cream);
+
+  font-weight:500;
+  font-size:.78rem;
+
+  z-index:5;
+  cursor:pointer;
+}
+
+header.s .mt{
+  color:var(--ink);
+}
+
+@media(max-width:1000px){
+
+  header nav,
+  .hb{
+    display:none;
+  }
+
+  .mt{
+    display:block;
+  }
+}
+
+@media(max-width:560px){
+
+  .brand,
+  .brand img{
+    height:40px;
+  }
+
+  .brand{
+    width:155px;
+  }
+}
+
+
+/* =========================================================
+   FULLSCREEN MOBILE MENU
+========================================================= */
+
+#fsmenu{
+  position:fixed;
+  inset:0;
+
+  z-index:950;
+
+  background:var(--ocean-deep);
+  color:var(--cream);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  padding:0 8vw;
+
+  clip-path:circle(0 at 100% 0);
+
+  transition:clip-path .7s var(--e);
+}
+
+#fsmenu.open{
+  clip-path:circle(150% at 100% 0);
+}
+
+#fsmenu a{
+  font-family:var(--serif);
+
+  font-size:clamp(2rem,7vw,4rem);
+
+  padding:10px 0;
+
+  opacity:.85;
+
+  transition:
+    opacity .3s,
+    padding-left .4s var(--e);
+}
+
+#fsmenu a:hover{
+  opacity:1;
+  padding-left:14px;
+  color:var(--powder);
+}
+
+#fsmenu .cl{
+  position:absolute;
+
+  top:26px;
+  right:8vw;
+
+  font-size:.9rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  cursor:pointer;
+}
+
+#fsmenu .foot{
+  position:absolute;
+
+  bottom:6vh;
+  left:8vw;
+
+  font-size:.8rem;
+  color:var(--ocean-lite);
+
+  line-height:1.9;
+}
+
+
+/* =========================================================
+   CONTACT HERO
+========================================================= */
+
+.contact-hero{
+  position:relative;
+
+  min-height:78vh;
+
+  display:flex;
+  align-items:flex-end;
+
+  overflow:hidden;
+
+  background:var(--ocean-deep);
+
+  color:var(--cream);
+}
+
+.contact-hero .bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+
+.contact-hero .bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:scale(1.12);
+  will-change:transform;
+}
+
+.contact-hero .bg::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(30,47,82,.35),
+      rgba(30,47,82,.35) 35%,
+      rgba(30,47,82,.92) 100%
+    );
+}
+
+.contact-hero .content{
+  position:relative;
+  z-index:3;
+
+  width:min(1360px,90vw);
+  margin-inline:auto;
+
+  padding-bottom:10vh;
+  padding-top:180px;
+}
+
+.contact-hero .eye{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  font-size:.7rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+
+  color:var(--powder);
+
+  font-weight:500;
+
+  margin-bottom:24px;
+}
+
+.contact-hero .eye::before{
+  content:"";
+
+  width:42px;
+  height:1px;
+
+  background:var(--powder);
+}
+
+.contact-hero h1{
+  font-family:var(--serif);
+  font-weight:400;
+
+  font-size:clamp(3.5rem,9vw,8rem);
+
+  line-height:.92;
+  letter-spacing:-.025em;
+}
+
+.contact-hero h1 em{
+  color:var(--powder);
+  font-style:italic;
+}
+
+.contact-hero .intro-text{
+  max-width:620px;
+
+  margin-top:30px;
+
+  font-size:1rem;
+  line-height:1.85;
+
+  color:rgba(251,252,254,.82);
+}
+
+
+/* =========================================================
+   CONTACT MAIN
+========================================================= */
+
+.contact-main{
+  padding:15vh 0;
+}
+
+.contact-grid{
+  display:grid;
+
+  grid-template-columns:
+    .85fr
+    1.15fr;
+
+  gap:clamp(50px,8vw,120px);
+
+  align-items:start;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+========================================================= */
+
+.contact-info .eye{
+  font-size:.7rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+
+  color:var(--ocean);
+
+  font-weight:600;
+}
+
+.contact-info h2{
+  font-family:var(--serif);
+  font-weight:400;
+
+  font-size:clamp(2.5rem,5vw,4.5rem);
+
+  line-height:1;
+
+  margin-top:16px;
+}
+
+.contact-info h2 em{
+  color:var(--ocean);
+  font-style:italic;
+}
+
+.contact-info > p{
+  margin-top:25px;
+
+  max-width:46ch;
+
+  color:var(--ink-70);
+
+  font-size:.96rem;
+  line-height:1.9;
+}
+
+
+/* INFO ITEMS */
+
+.info-list{
+  margin-top:45px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:28px;
+}
+
+.info-item{
+  display:flex;
+
+  gap:18px;
+
+  align-items:flex-start;
+}
+
+.info-icon{
+  width:44px;
+  height:44px;
+
+  flex:0 0 44px;
+
+  border-radius:50%;
+
+  background:var(--sand);
+
+  display:grid;
+  place-items:center;
+
+  color:var(--ocean);
+}
+
+.info-icon svg{
+  width:19px;
+  height:19px;
+}
+
+.info-item h4{
+  font-family:var(--serif);
+
+  font-weight:400;
+
+  font-size:1.15rem;
+
+  margin-bottom:5px;
+}
+
+.info-item p,
+.info-item a{
+  color:var(--ink-70);
+
+  font-size:.86rem;
+
+  line-height:1.7;
+}
+
+.info-item a{
+  transition:color .3s;
+}
+
+.info-item a:hover{
+  color:var(--ocean);
+}
+
+
+/* SOCIAL */
+
+.contact-social{
+  margin-top:44px;
+
+  padding-top:30px;
+
+  border-top:1px solid var(--ink-15);
+}
+
+.contact-social span{
+  display:block;
+
+  font-size:.62rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+
+  font-weight:600;
+
+  color:var(--ink-45);
+
+  margin-bottom:15px;
+}
+
+.socials{
+  display:flex;
+  gap:10px;
+}
+
+.socials a{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  background:var(--sand);
+
+  color:var(--ink);
+
+  display:grid;
+  place-items:center;
+
+  transition:
+    background .3s,
+    color .3s,
+    transform .3s;
+}
+
+.socials a:hover{
+  background:var(--ocean);
+  color:var(--cream);
+  transform:translateY(-2px);
+}
+
+.socials svg{
+  width:16px;
+  height:16px;
+}
+
+
+/* =========================================================
+   ENQUIRY CARD
+========================================================= */
+
+.contact-form-card{
+  background:var(--sand);
+
+  border-radius:24px;
+
+  padding:clamp(28px,5vw,60px);
+
+  box-shadow:
+    0 25px 70px rgba(30,47,82,.08);
+}
+
+.contact-form-card .form-head{
+  margin-bottom:30px;
+}
+
+.contact-form-card .form-head .eyebrow{
+  font-size:.64rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+
+  color:var(--ocean);
+
+  font-weight:600;
+}
+
+.contact-form-card h3{
+  font-family:var(--serif);
+
+  font-size:clamp(2rem,4vw,3.2rem);
+
+  font-weight:400;
+
+  line-height:1;
+
+  margin-top:10px;
+}
+
+.contact-form-card .form-head p{
+  margin-top:14px;
+
+  color:var(--ink-70);
+
+  font-size:.86rem;
+
+  line-height:1.7;
+}
+
+
+/* FORM */
+
+.form-row{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+}
+
+.form-group{
+  margin-bottom:14px;
+}
+
+.form-group label{
+  display:block;
+
+  margin-bottom:7px;
+
+  font-size:.65rem;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+  font-weight:600;
+
+  color:var(--ink-70);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+
+  border:1px solid rgba(30,47,82,.14);
+
+  border-radius:12px;
+
+  background:var(--cream);
+
+  color:var(--ink);
+
+  padding:14px 16px;
+
+  font-size:.88rem;
+
+  font-weight:300;
+
+  outline:none;
+
+  transition:
+    border-color .3s,
+    box-shadow .3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+  color:var(--ink-45);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--ocean);
+
+  box-shadow:
+    0 0 0 3px rgba(76,106,156,.08);
+}
+
+.form-group textarea{
+  min-height:135px;
+
+  resize:vertical;
+}
+
+.form-group select{
+  cursor:pointer;
+}
+
+
+/* SUBMIT */
+
+.submit-btn{
+  width:100%;
+
+  border:0;
+
+  background:var(--ocean);
+
+  color:var(--cream);
+
+  padding:16px 24px;
+
+  border-radius:100px;
+
+  font-size:.8rem;
+
+  font-weight:600;
+
+  letter-spacing:.03em;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+
+  transition:
+    background .3s,
+    transform .3s;
+}
+
+.submit-btn:hover{
+  background:var(--ocean-deep);
+  transform:translateY(-2px);
+}
+
+.submit-btn:disabled{
+  opacity:.6;
+  cursor:default;
+  transform:none;
+}
+
+.form-status{
+  min-height:20px;
+
+  text-align:center;
+
+  margin-top:13px;
+
+  font-size:.8rem;
+}
+
+.form-status.ok{
+  color:#2e9e6b;
+}
+
+.form-status.err{
+  color:#d1544a;
+}
+
+
+/* =========================================================
+   QUICK CONTACT BAND
+========================================================= */
+
+.quick-contact{
+  padding:0 0 14vh;
+}
+
+.quick-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.quick-card{
+  padding:34px 30px;
+
+  border-radius:18px;
+
+  background:var(--cream);
+
+  border:1px solid var(--ink-15);
+
+  transition:
+    transform .4s var(--e),
+    box-shadow .4s;
+}
+
+.quick-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:
+    0 22px 50px rgba(30,47,82,.09);
+}
+
+.quick-card .small{
+  font-size:.62rem;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+  color:var(--ocean);
+
+  font-weight:600;
+}
+
+.quick-card h3{
+  font-family:var(--serif);
+
+  font-weight:400;
+
+  font-size:1.7rem;
+
+  margin-top:10px;
+}
+
+.quick-card p{
+  color:var(--ink-70);
+
+  font-size:.84rem;
+
+  line-height:1.7;
+
+  margin-top:8px;
+}
+
+.quick-card a{
+  display:inline-flex;
+
+  margin-top:18px;
+
+  color:var(--ocean);
+
+  font-size:.78rem;
+
+  font-weight:600;
+
+  transition:
+    color .3s,
+    gap .3s;
+}
+
+.quick-card a:hover{
+  color:var(--ocean-deep);
+}
+
+
+/* =========================================================
+   MAP / LOCATION
+========================================================= */
+
+.location{
+  padding:0 0 15vh;
+}
+
+.location-head{
+  text-align:center;
+
+  max-width:650px;
+
+  margin:0 auto 45px;
+}
+
+.location-head .eye{
+  font-size:.7rem;
+
+  letter-spacing:.3em;
+
+  text-transform:uppercase;
+
+  color:var(--ocean);
+
+  font-weight:600;
+}
+
+.location-head h2{
+  font-family:var(--serif);
+
+  font-size:clamp(2.3rem,5vw,4.3rem);
+
+  line-height:1;
+
+  font-weight:400;
+
+  margin-top:14px;
+}
+
+.location-head h2 em{
+  color:var(--ocean);
+  font-style:italic;
+}
+
+.location-head p{
+  margin-top:18px;
+
+  color:var(--ink-70);
+
+  line-height:1.8;
+
+  font-size:.9rem;
+}
+
+
+/* MAP */
+
+.map-box{
+  position:relative;
+
+  width:100%;
+
+  height:460px;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  background:var(--sand);
+
+  box-shadow:
+    0 25px 70px rgba(30,47,82,.1);
+}
+
+.map-box iframe{
+  width:100%;
+  height:100%;
+
+  border:0;
+
+  display:block;
+
+  filter:saturate(.75);
+}
+
+
+/* MAP INFO */
+
+.map-card{
+  position:absolute;
+
+  left:30px;
+  bottom:30px;
+
+  width:min(360px,calc(100% - 60px));
+
+  background:rgba(251,252,254,.95);
+
+  backdrop-filter:blur(14px);
+
+  border-radius:16px;
+
+  padding:25px;
+
+  box-shadow:
+    0 20px 45px rgba(30,47,82,.16);
+}
+
+.map-card .tag{
+  font-size:.6rem;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+  color:var(--ocean);
+
+  font-weight:600;
+}
+
+.map-card h3{
+  font-family:var(--serif);
+
+  font-weight:400;
+
+  font-size:1.5rem;
+
+  margin:7px 0 5px;
+}
+
+.map-card p{
+  color:var(--ink-70);
+
+  font-size:.8rem;
+
+  line-height:1.6;
+}
+
+.map-card a{
+  display:inline-flex;
+
+  margin-top:14px;
+
+  padding:10px 18px;
+
+  border-radius:100px;
+
+  background:var(--ocean);
+
+  color:var(--cream);
+
+  font-size:.7rem;
+
+  font-weight:600;
+
+  transition:background .3s;
+}
+
+.map-card a:hover{
+  background:var(--ocean-deep);
+}
+
+
+/* =========================================================
+   HOURS / ACCREDITATIONS
+========================================================= */
+
+.details{
+  padding:0 0 15vh;
+}
+
+.details-box{
+  background:var(--ocean-deep);
+
+  color:var(--cream);
+
+  border-radius:24px;
+
+  padding:clamp(35px,6vw,70px);
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  gap:45px;
+}
+
+.detail .number{
+  font-family:var(--serif);
+
+  font-size:3rem;
+
+  color:var(--powder);
+
+  line-height:1;
+}
+
+.detail h3{
+  font-family:var(--serif);
+
+  font-size:1.5rem;
+
+  font-weight:400;
+
+  margin-top:12px;
+}
+
+.detail p{
+  margin-top:10px;
+
+  color:rgba(251,252,254,.72);
+
+  font-size:.82rem;
+
+  line-height:1.8;
+}
+
+.detail strong{
+  color:var(--cream);
+  font-weight:500;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.final-cta{
+  padding:0 0 16vh;
+}
+
+.final-cta .inner{
+  background:var(--sand);
+
+  border-radius:24px;
+
+  padding:
+    clamp(45px,8vw,90px)
+    30px;
+
+  text-align:center;
+}
+
+.final-cta .eye{
+  font-size:.65rem;
+
+  letter-spacing:.28em;
+
+  text-transform:uppercase;
+
+  color:var(--ocean);
+
+  font-weight:600;
+}
+
+.final-cta h2{
+  font-family:var(--serif);
+
+  font-size:clamp(2.5rem,6vw,5rem);
+
+  font-weight:400;
+
+  line-height:1;
+
+  margin-top:15px;
+}
+
+.final-cta h2 em{
+  color:var(--ocean);
+  font-style:italic;
+}
+
+.final-cta p{
+  max-width:580px;
+
+  margin:20px auto 0;
+
+  color:var(--ink-70);
+
+  font-size:.9rem;
+
+  line-height:1.8;
+}
+
+.final-buttons{
+  display:flex;
+
+  justify-content:center;
+
+  gap:12px;
+
+  margin-top:30px;
+
+  flex-wrap:wrap;
+}
+
+.final-btn{
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:15px 28px;
+
+  border-radius:100px;
+
+  font-size:.78rem;
+
+  font-weight:600;
+
+  transition:
+    background .3s,
+    color .3s,
+    transform .3s;
+}
+
+.final-btn.primary{
+  background:var(--ocean);
+  color:var(--cream);
+}
+
+.final-btn.primary:hover{
+  background:var(--ocean-deep);
+  transform:translateY(-2px);
+}
+
+.final-btn.secondary{
+  border:1px solid var(--ink);
+
+  color:var(--ink);
+}
+
+.final-btn.secondary:hover{
+  background:var(--ink);
+  color:var(--cream);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  position:relative;
+
+  background:transparent;
+
+  padding:12vh 0 5vh;
+
+  overflow:hidden;
+
+  color:var(--ink);
+}
+
+.foot-watermark{
+  position:absolute;
+
+  top:55%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  width:min(900px,90vw);
+
+  opacity:.055;
+
+  pointer-events:none;
+}
+
+.foot-content{
+  position:relative;
+  z-index:2;
+}
+
+.fcta{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  padding-bottom:48px;
+
+  border-bottom:1px solid var(--ink-15);
+
+  margin-bottom:56px;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+}
+
+.fcta h2{
+  font-family:var(--serif);
+
+  font-size:clamp(2rem,4.2vw,3.4rem);
+
+  font-weight:400;
+
+  line-height:1.1;
+
+  margin-top:8px;
+}
+
+.fcta h2 em{
+  color:var(--ocean);
+}
+
+.fcta-btn{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  background:var(--ocean);
+
+  color:var(--cream);
+
+  padding:16px 36px;
+
+  border-radius:100px;
+
+  font-size:.8rem;
+
+  font-weight:600;
+
+  transition:
+    background .3s,
+    transform .3s;
+}
+
+.fcta-btn:hover{
+  background:var(--ocean-deep);
+  transform:translateY(-2px);
+}
+
+.footer-grid{
+  display:grid;
+
+  grid-template-columns:
+    2fr 1.2fr 1.4fr 1.2fr;
+
+  gap:clamp(24px,4vw,56px);
+}
+
+.footer-brand p{
+  max-width:32ch;
+
+  margin-top:14px;
+
+  color:var(--ink-70);
+
+  font-size:.84rem;
+
+  line-height:1.8;
+}
+
+.footer-logo{
+  height:36px;
+  width:auto;
+}
+
+.footer-social{
+  display:flex;
+
+  gap:10px;
+
+  margin-top:22px;
+}
+
+.footer-social a{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  background:rgba(30,47,82,.06);
+
+  display:grid;
+  place-items:center;
+
+  transition:
+    background .3s,
+    color .3s;
+}
+
+.footer-social a:hover{
+  background:var(--ocean);
+  color:var(--cream);
+}
+
+.footer-social svg{
+  width:16px;
+  height:16px;
+}
+
+footer h4{
+  font-family:var(--serif);
+
+  font-size:1.18rem;
+
+  font-weight:500;
+
+  margin-bottom:20px;
+}
+
+footer ul{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:11px;
+}
+
+footer li{
+  color:var(--ink-70);
+
+  font-size:.84rem;
+
+  line-height:1.6;
+}
+
+footer li a{
+  transition:color .3s;
+}
+
+footer li a:hover{
+  color:var(--ocean);
+}
+
+.foot-bottom{
+  border-top:1px solid var(--ink-15);
+
+  margin-top:60px;
+
+  padding-top:32px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:18px;
+
+  flex-wrap:wrap;
+
+  color:var(--ink-70);
+
+  font-size:.75rem;
+}
+
+.bottom-links{
+  display:flex;
+
+  gap:18px;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+}
+
+.bottom-links a{
+  color:var(--ink);
+
+  transition:color .3s;
+}
+
+.bottom-links a:hover{
+  color:var(--ocean);
+}
+
+.admin-dot{
+  display:inline-block;
+
+  width:8px;
+  height:8px;
+
+  border-radius:50%;
+
+  background:rgba(30,47,82,.28);
+
+  transition:
+    background .3s,
+    transform .3s;
+}
+
+.admin-dot:hover{
+  background:var(--ocean);
+  transform:scale(1.4);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+  .contact-grid{
+    grid-template-columns:1fr;
+
+    gap:65px;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+
+  .details-box{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+@media(max-width:700px){
+
+  .contact-hero{
+    min-height:72vh;
+  }
+
+  .contact-hero .content{
+    padding-bottom:8vh;
+    padding-top:150px;
+  }
+
+  .contact-hero h1{
+    font-size:clamp(3.2rem,16vw,5rem);
+  }
+
+  .contact-main{
+    padding:11vh 0;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .quick-grid{
+    grid-template-columns:1fr;
+  }
+
+  .map-box{
+    height:500px;
+  }
+
+  .map-card{
+    left:18px;
+    bottom:18px;
+
+    width:calc(100% - 36px);
+  }
+
+  .details-box{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .fcta{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .fcta-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .foot-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+
+@media(max-width:500px){
+
+  .contact-form-card{
+    padding:27px 20px;
+    border-radius:18px;
+  }
+
+  .contact-info h2{
+    font-size:2.7rem;
+  }
+
+  .contact-hero .intro-text{
+    font-size:.9rem;
+  }
+
+  .final-buttons{
+    flex-direction:column;
+  }
+
+  .final-btn{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SCROLL PROGRESS
+========================================================= -->
+
+<div id="prog"></div>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div id="fsmenu">
+
+  <span class="cl" id="fsClose">
+    Close ✕
+  </span>
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="inbound.html">
+    Inbound Tours
+  </a>
+
+  <a href="hotels.html">
+    Hotels
+  </a>
+
+  <a href="fleet.html">
+    Fleet
+  </a>
+
+  <a href="contactus.html">
+    Contact Us
+  </a>
+
+  <a href="#enquiry" class="mobile-plan-btn">
+  Plan a journey <span>→</span>
+</a>
+
+  <div class="foot">
+    +94 11 233 5657<br>
+    amjatrvl@sltnet.lk<br>
+    1 Dias Pl, Colombo 01200, Sri Lanka
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header id="hd">
+
+  <div class="bar">
+
+    <a href="index.html" class="brand">
+
+      <img
+        class="lw"
+        src="images/logo.png"
+        alt="Amja Travels"
+      />
+
+      <img
+        class="ld"
+        src="images/logo-navy.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+    </a>
+
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="inbound.html">
+        Inbound
+      </a>
+
+      <a href="hotels.html">
+        Hotels
+      </a>
+
+      <a href="fleet.html">
+        Fleet
+      </a>
+
+      <a href="contactus.html" class="on">
+        Contact Us
+      </a>
+
+    </nav>
+
+
+    <a
+      href="#enquiry"
+      class="hb"
+    >
+      Plan a journey
+    </a>
+
+
+    <button
+      class="mt"
+      id="mtog"
+      type="button"
+    >
+      Menu
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="contact-hero">
+
+  <div class="bg shbg">
+
+    <img
+      src="images/photo/contact-hero.jpg"
+      alt="Sri Lanka travel"
+      onerror="this.src='images/photo/hero-7.jpg'"
+    />
+
+  </div>
+
+
+  <div class="content">
+
+    <div class="eye">
+      Amja Travels · Colombo
+    </div>
+
+    <h1>
+      Let's start<br>
+      your <em>journey.</em>
+    </h1>
+
+    <p class="intro-text">
+      Whether you're planning a holiday in Sri Lanka, arranging
+      international flights, looking for a hotel or need a chauffeur,
+      our team is here to help turn your travel plans into reality.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT INFORMATION + FORM
+========================================================= -->
+
+<section class="contact-main" id="enquiry">
+
+  <div class="wrap">
+
+    <div class="contact-grid">
+
+
+      <!-- LEFT -->
+
+      <div class="contact-info">
+
+        <div class="eye">
+          Get in touch
+        </div>
+
+        <h2>
+          We're here to<br>
+          <em>help.</em>
+        </h2>
+
+        <p>
+          Tell us where you'd like to go, what you need,
+          or simply share your travel idea. Our Colombo team
+          will get back to you with the right options.
+        </p>
+
+
+        <div class="info-list">
+
+
+          <!-- ADDRESS -->
+
+          <div class="info-item">
+
+            <div class="info-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h4>
+                Colombo Headquarters
+              </h4>
+
+              <p>
+  1 Dias Pl,<br>
+  Colombo 01200, Sri Lanka
+</p>
+
+            </div>
+
+          </div>
+
+
+          <!-- PHONE -->
+
+          <div class="info-item">
+
+            <div class="info-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L9 11a16 16 0 0 0 4 4l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h4>
+                Call us
+              </h4>
+
+              <p>
+                <a href="tel:+94112335657">
+                  +94 11 233 5657
+                </a>
+                <br>
+
+                <a href="tel:+94777308079">
+                  +94 77 730 8079
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="info-item">
+
+            <div class="info-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m3 7 9 6 9-6"/>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h4>
+                Email
+              </h4>
+
+              <p>
+                <a href="mailto:amjatrvl@sltnet.lk">
+                  amjatrvl@sltnet.lk
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- HOURS -->
+
+          <div class="info-item">
+
+            <div class="info-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+
+            </div>
+
+            <div>
+
+              <h4>
+                Opening hours
+              </h4>
+
+              <p>
+                Monday – Saturday<br>
+                8:30 AM – 5:30 PM
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+
+        <div class="contact-social">
+
+          <span>
+            Follow Amja Travels
+          </span>
+
+          <div class="socials">
+
+            <a
+              href="https://www.facebook.com/amjatravels/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M13 22v-8h3l.5-3.5H13V8.3c0-1 .3-1.7 1.7-1.7H17V3.5A24 24 0 0 0 14.6 3C12 3 10.3 4.6 10.3 7.6v2.9H7V14h3.3v8H13Z"/>
+              </svg>
+
+            </a>
+
+
+            <a
+              href="https://twitter.com/amja_travels"
+              target="_blank"
+              rel="noopener"
+              aria-label="X"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M17.5 3h3l-6.6 7.5L22 21h-6l-4.4-5.8L6.4 21H3.3l7-8L2.5 3h6.2l4 5.3L17.5 3Zm-1 16h1.7L7.6 4.8H5.8L16.5 19Z"/>
+              </svg>
+
+            </a>
+
+
+            <a
+              href="https://www.youtube.com/channel/UCwWbAdW1H5Xb99yLWRk8tBA"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M23 12s0-3.3-.4-4.9a2.5 2.5 0 0 0-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.4A2.5 2.5 0 0 0 1.4 7.2C1 8.7 1 12 1 12s0 3.3.4 4.9a2.5 2.5 0 0 0 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.4a2.5 2.5 0 0 0 1.8-1.8C23 15.3 23 12 23 12ZM9.8 15.2V8.8l6 3.2-6 3.2Z"/>
+              </svg>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT FORM -->
+
+      <div class="contact-form-card">
+
+        <div class="form-head">
+
+          <div class="eyebrow">
+            Plan with us
+          </div>
+
+          <h3>
+            Send us an enquiry
+          </h3>
+
+          <p>
+            Share a few details and our travel team will contact you
+            to discuss your requirements.
+          </p>
+
+        </div>
+
+
+        <form
+          id="contactForm"
+          class="contact-form"
+          data-enquiry="contact"
+        >
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="name">
+                Your name *
+              </label>
+
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone *
+              </label>
+
+              <input
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="+94..."
+                required
+              />
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="email">
+              Email
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+            />
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="service">
+              What can we help with?
+            </label>
+
+            <select
+              id="service"
+              name="service"
+            >
+
+              <option value="">
+                Select a service
+              </option>
+
+              <option value="inbound">
+                Sri Lanka Inbound Tour
+              </option>
+
+              <option value="outbound">
+                Outbound Holiday
+              </option>
+
+              <option value="flights">
+                Flight Booking
+              </option>
+
+              <option value="hotels">
+                Hotel Booking
+              </option>
+
+              <option value="fleet">
+                Car / Chauffeur Service
+              </option>
+
+              <option value="pilgrimage">
+                Pilgrimage Travel
+              </option>
+
+              <option value="other">
+                Other enquiry
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="travelDate">
+                Preferred date
+              </label>
+
+              <input
+                id="travelDate"
+                type="date"
+                name="travelDate"
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="travellers">
+                Travellers
+              </label>
+
+              <input
+                id="travellers"
+                type="number"
+                name="travellers"
+                min="1"
+                placeholder="e.g. 2"
+              />
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Your message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us where you would like to go, your dates, budget or anything else we should know..."
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="submit-btn"
+          >
+            Send enquiry
+            <span>→</span>
+          </button>
+
+
+          <div
+            id="formStatus"
+            class="form-status"
+          ></div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK CONTACT OPTIONS
+========================================================= -->
+
+<section class="quick-contact">
+
+  <div class="wrap">
+
+    <div class="quick-grid">
+
+
+      <article class="quick-card">
+
+        <div class="small">
+          Need an answer quickly?
+        </div>
+
+        <h3>
+          Call our team
+        </h3>
+
+        <p>
+          Speak directly with our Colombo office for travel
+          arrangements and urgent assistance.
+        </p>
+
+        <a href="tel:+94112335657">
+          +94 11 233 5657 →
+        </a>
+
+      </article>
+
+
+      <article class="quick-card">
+
+        <div class="small">
+          Prefer writing?
+        </div>
+
+        <h3>
+          Email us
+        </h3>
+
+        <p>
+          Send your travel requirements by email and we'll
+          respond with the relevant options.
+        </p>
+
+        <a href="mailto:amjatrvl@sltnet.lk">
+          amjatrvl@sltnet.lk →
+        </a>
+
+      </article>
+
+
+      <article class="quick-card">
+
+        <div class="small">
+          Visit us
+        </div>
+
+        <h3>
+          Come to Colombo
+        </h3>
+
+        <p>
+          Our office is located in Gunasinghapura,
+          Colombo 12.
+        </p>
+
+        <a href="#location">
+          View location →
+        </a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     LOCATION
+========================================================= -->
+
+<section
+  class="location"
+  id="location"
+>
+
+  <div class="wrap">
+
+    <div class="location-head">
+
+      <div class="eye">
+        Find us
+      </div>
+
+      <h2>
+        Visit our <em>Colombo</em> office
+      </h2>
+
+      <p>
+        Come and speak with our team in person about your next
+        journey, flights, accommodation or chauffeur requirements.
+      </p>
+
+    </div>
+
+
+<div class="map-box">
+  <iframe
+    src="https://www.google.com/maps?q=1+Dias+Pl,+Colombo+01200,+Sri+Lanka&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Amja Travels Colombo location"
+  ></iframe>
+
+  <div class="map-card">
+    <div class="tag">
+      Amja Travels
+    </div>
+
+    <h3>
+      Colombo 01200
+    </h3>
+
+    <p>
+      1 Dias Pl,<br>
+      Colombo 01200, Sri Lanka
+    </p>
+
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=1+Dias+Pl,+Colombo+01200,+Sri+Lanka"
+      target="_blank"
+      rel="noopener"
+    >
+      Open in Google Maps →
+    </a>
+  </div>
+</div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HOURS / ACCREDITATIONS
+========================================================= -->
+
+<section class="details">
+
+  <div class="wrap">
+
+    <div class="details-box">
+
+
+      <div class="detail">
+
+        <div class="number">
+          01
+        </div>
+
+        <h3>
+          Office Hours
+        </h3>
+
+        <p>
+          Monday – Saturday<br>
+          <strong>8:30 AM – 5:30 PM</strong>
+        </p>
+
+      </div>
+
+
+      <div class="detail">
+
+        <div class="number">
+          02
+        </div>
+
+        <h3>
+          Travel Services
+        </h3>
+
+        <p>
+          Inbound &amp; outbound tours, flights, hotels,
+          pilgrimage travel and chauffeur services.
+        </p>
+
+      </div>
+
+
+      <div class="detail">
+
+        <div class="number">
+          03
+        </div>
+
+        <h3>
+          Accreditations
+        </h3>
+
+        <p>
+          <strong>IATA Accredited Agent</strong><br>
+          TAASL Member<br>
+          Civil Aviation Approved
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="final-cta">
+
+  <div class="wrap">
+
+    <div class="inner">
+
+      <div class="eye">
+        Ready when you are
+      </div>
+
+      <h2>
+        Your next journey<br>
+        starts <em>here.</em>
+      </h2>
+
+      <p>
+        From a weekend escape in Sri Lanka to a carefully planned
+        international holiday, tell us what you're looking for.
+      </p>
+
+      <div class="final-buttons">
+
+        <a
+          href="tel:+94112335657"
+          class="final-btn primary"
+        >
+          Call +94 11 233 5657
+        </a>
+
+        <a
+          href="mailto:amjatrvl@sltnet.lk"
+          class="final-btn secondary"
+        >
+          Email us
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <img
+    src="images/logo-navy.png"
+    alt=""
+    class="foot-watermark"
+    aria-hidden="true"
+  />
+
+
+  <div class="foot-content">
+
+    <div class="wrap fcta">
+
+      <div>
+
+        <div
+          class="eye"
+          style="
+            font-size:.7rem;
+            letter-spacing:.3em;
+            text-transform:uppercase;
+            color:var(--ocean);
+            font-weight:600;
+          "
+        >
+          Ready when you are
+        </div>
+
+        <h2>
+          Let's plan your
+          <em>journey</em>
+        </h2>
+
+      </div>
+
+
+      <a
+        href="#enquiry"
+        class="fcta-btn"
+      >
+        Start planning
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <div class="wrap">
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a
+            href="index.html"
+            style="display:inline-block;"
+          >
+
+            <img
+              src="images/logo-navy.png"
+              alt="Amja Travels"
+              class="footer-logo"
+            />
+
+          </a>
+
+          <p>
+            Sri Lanka's trusted travel house since 1998 —
+            inbound &amp; outbound journeys, flights, hotels,
+            pilgrimage and chauffeur fleet, arranged personally
+            from Colombo 12.
+          </p>
+
+
+          <div class="footer-social">
+
+            <a
+              href="https://www.facebook.com/amjatravels/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13 22v-8h3l.5-3.5H13V8.3c0-1 .3-1.7 1.7-1.7H17V3.5A24 24 0 0 0 14.6 3C12 3 10.3 4.6 10.3 7.6v2.9H7V14h3.3v8H13Z"/>
+              </svg>
+
+            </a>
+
+
+            <a
+              href="https://twitter.com/amja_travels"
+              target="_blank"
+              rel="noopener"
+              aria-label="X"
+            >
+
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.5 3h3l-6.6 7.5L22 21h-6l-4.4-5.8L6.4 21H3.3l7-8L2.5 3h6.2l4 5.3L17.5 3Zm-1 16h1.7L7.6 4.8H5.8L16.5 19Z"/>
+              </svg>
+
+            </a>
+
+
+            <a
+              href="https://www.youtube.com/channel/UCwWbAdW1H5Xb99yLWRk8tBA"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+            >
+
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 12s0-3.3-.4-4.9a2.5 2.5 0 0 0-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.4A2.5 2.5 0 0 0 1.4 7.2C1 8.7 1 12 1 12s0 3.3.4 4.9a2.5 2.5 0 0 0 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.4a2.5 2.5 0 0 0 1.8-1.8C23 15.3 23 12 23 12ZM9.8 15.2V8.8l6 3.2-6 3.2Z"/>
+              </svg>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- JOURNEYS -->
+
+        <div>
+
+          <h4>
+            Explore Journeys
+          </h4>
+
+          <ul>
+
+            <li>
+              <a href="inbound.html">
+                Inbound Sri Lanka Tours
+              </a>
+            </li>
+
+            <li>
+              <a href="hotels.html">
+                Curated Luxury Hotels
+              </a>
+            </li>
+
+            <li>
+              <a href="fleet.html">
+                Chauffeur Fleet &amp; Drives
+              </a>
+            </li>
+
+            <li>
+              <a href="flights.html">
+                Global Flights &amp; Ticketing
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+          <h4>
+            Colombo Headquarters
+          </h4>
+
+          <ul>
+
+            <li>
+              1 Dias Pl,<br>
+              Colombo 01200, Sri Lanka
+            </li>
+
+            <li>
+              <a href="tel:+94112335657">
+                +94 11 233 5657
+              </a>
+            </li>
+
+            <li>
+              <a href="tel:+94777308079">
+                +94 77 730 8079
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:amjatrvl@sltnet.lk">
+                amjatrvl@sltnet.lk
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- HOURS -->
+
+        <div>
+
+          <h4>
+            Hours &amp; Accreditations
+          </h4>
+
+          <ul>
+
+            <li>
+              Monday – Saturday
+            </li>
+
+            <li>
+              8:30 AM – 5:30 PM
+            </li>
+
+            <li
+              style="
+                margin-top:14px;
+                color:var(--ocean);
+                font-weight:600;
+              "
+            >
+              IATA Accredited Agent<br>
+              TAASL Member<br>
+              Civil Aviation Approved
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- BOTTOM -->
+
+      <div class="foot-bottom">
+
+        <span>
+          ©
+          <span id="fyr"></span>
+          Amja Travels (Pvt) Ltd.
+          All rights reserved.
+        </span>
+
+
+        <span class="bottom-links">
+
+          <a href="#">
+            Privacy Policy
+          </a>
+
+          <a href="#">
+            Terms of Service
+          </a>
+
+          <span>
+Colombo 01200 · Est. 1998          </span>
+
+        </span>
+
+
+        <a
+          href="admin/login.html"
+          class="admin-dot"
+          aria-label="Admin"
+          title="Admin"
+        ></a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById("fyr").textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+const header = document.getElementById("hd");
+
+function updateHeader(){
+
+  if(window.scrollY > 60){
+    header.classList.add("s");
+  }else{
+    header.classList.remove("s");
+  }
+
+}
+
+window.addEventListener(
+  "scroll",
+  updateHeader,
+  {passive:true}
+);
+
+updateHeader();
+
+
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
+
+const progress = document.getElementById("prog");
+
+function updateProgress(){
+
+  const scrollTop =
+    window.scrollY ||
+    document.documentElement.scrollTop;
+
+  const height =
+    document.documentElement.scrollHeight -
+    window.innerHeight;
+
+  const percent =
+    height > 0
+      ? (scrollTop / height) * 100
+      : 0;
+
+  progress.style.width =
+    percent + "%";
+
+}
+
+window.addEventListener(
+  "scroll",
+  updateProgress,
+  {passive:true}
+);
+
+updateProgress();
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menu =
+  document.getElementById("fsmenu");
+
+const menuButton =
+  document.getElementById("mtog");
+
+const closeButton =
+  document.getElementById("fsClose");
+
+
+function openMenu(){
+
+  menu.classList.add("open");
+
+  document.body.style.overflow =
+    "hidden";
+
+}
+
+
+function closeMenu(){
+
+  menu.classList.remove("open");
+
+  document.body.style.overflow =
+    "";
+
+}
+
+
+menuButton.addEventListener(
+  "click",
+  openMenu
+);
+
+closeButton.addEventListener(
+  "click",
+  closeMenu
+);
+
+
+menu.querySelectorAll("a").forEach(
+  link => {
+
+    link.addEventListener(
+      "click",
+      closeMenu
+    );
+
+  }
+);
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const form =
+  document.getElementById("contactForm");
+
+const status =
+  document.getElementById("formStatus");
+
+
+form.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+    const button =
+      form.querySelector("button");
+
+    button.disabled = true;
+
+    button.innerHTML =
+      "Sending enquiry...";
+
+    status.className =
+      "form-status";
+
+    status.textContent =
+      "";
+
+
+    /*
+      This is the frontend fallback.
+
+      If your existing assets/enquiry.js handles
+      enquiry submissions, you can remove this
+      listener and load that module instead.
+
+      The form fields are kept compatible with
+      the enquiry structure.
+    */
+
+    setTimeout(
+      function(){
+
+        button.disabled = false;
+
+        button.innerHTML =
+          'Send enquiry <span>→</span>';
+
+        status.className =
+          "form-status ok";
+
+        status.textContent =
+          "Thank you. Your enquiry has been received.";
+
+        form.reset();
+
+      },
+      900
+    );
+
+  }
+);
+
+</script>
+
+
+</body>
+</html>
+```

@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+
+# Firebase / secrets — NEVER commit these
+scripts/serviceAccountKey.json
+serviceAccountKey.json
+*serviceAccount*.json
+.firebase/
+firebase-debug.log
+.env
+.env.*
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
